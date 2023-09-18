@@ -1,5 +1,13 @@
-<form method="post">
-    {% csrf_token %}
-    {{ formulario.as_p }}
-    <button type="submit">Enviar</button>
-</form>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{ formulario.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+
+
+{% endblock %}

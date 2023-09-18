@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Listado de Personas Naturales</h1>
+    <a href="{% url 'crear_persona_natural' %}">Crear Persona Natural</a>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Documento</th>
+                <th>Nombres</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Dirección</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for persona in personas %}
+            <tr>
+                <td>{{ persona.NumDocumento }}</td>
+                <td>{{ persona.Nombres }}</td>
+                <td>{{ persona.ApellidoPaterno }}</td>
+                <td>{{ persona.ApellidoMaterno }}</td>
+                <td>{{ persona.FechaNacimiento }}</td>
+                <td>{{ persona.Direccion }}</td>
+                <td>{{ persona.Correo }}</td>
+                <td>{{ persona.Telefono }}</td>
+                <td>
+                    <a href="{% url 'editar_persona_natural' persona.PersonaNaturalId %}">Editar</a>
+                    <a href="{% url 'eliminar_persona_natural' persona.PersonaNaturalId %}">Eliminar</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="9">No hay personas naturales registradas.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

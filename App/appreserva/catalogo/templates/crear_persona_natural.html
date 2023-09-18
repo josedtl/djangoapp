@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+
+    <h1>Crear Persona Natural</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.NumDocumento.id_for_label }}">Número de Documento:</label>
+        {{ form.NumDocumento }}
+        <br>
+
+        <label for="{{ form.Nombres.id_for_label }}">Nombres:</label>
+        {{ form.Nombres }}
+        <br>
+
+        <label for="{{ form.ApellidoPaterno.id_for_label }}">Apellido Paterno:</label>
+        {{ form.ApellidoPaterno }}
+        <br>
+
+        <label for="{{ form.ApellidoMaterno.id_for_label }}">Apellido Materno:</label>
+        {{ form.ApellidoMaterno }}
+        <br>
+
+        <label for="{{ form.FechaNacimiento.id_for_label }}">Fecha de Nacimiento:</label>
+        <input type="date" name="{{ form.FechaNacimiento.name }}" value="{{ form.FechaNacimiento.value|date:'Y-m-d' }}">
+        <br>
+
+
+        <label for="{{ form.Direccion.id_for_label }}">Dirección:</label>
+        {{ form.Direccion }}
+        <br>
+
+        <label for="{{ form.Correo.id_for_label }}">Correo Electrónico:</label>
+        {{ form.Correo }}
+        <br>
+
+        <label for="{{ form.Telefono.id_for_label }}">Teléfono:</label>
+        {{ form.Telefono }}
+        <br>
+
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'listar_personas_naturales' %}">Volver al listado</a>
+
+</div>
+{% endblock %}

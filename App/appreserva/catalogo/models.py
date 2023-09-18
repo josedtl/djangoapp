@@ -9,7 +9,7 @@ class PersonaNatural(models.Model):
     FechaNacimiento = models.DateField()
     Direccion = models.CharField(max_length=200)
     Correo = models.EmailField()
-    Telefono = models.CharField(max_length=15)
+    Telefono = models.CharField(max_length=20)
 
     def __str__(self):
         return self.Nombres

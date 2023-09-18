@@ -21,4 +21,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("store/", include("store.urls")),
     path("apirest/", include("ApiRestApp.urls")),
+    path("catalogo/", include("catalogo.urls")),
 ]
