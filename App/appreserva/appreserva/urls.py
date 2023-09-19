@@ -22,4 +22,5 @@ urlpatterns = [
     path("store/", include("store.urls")),
     path("apirest/", include("ApiRestApp.urls")),
     path("catalogo/", include("catalogo.urls")),
+    path("ApiLogistica/", include("ApiLogistica.urls")),
 ]

@@ -53,4 +53,31 @@ class CatalogoPersonaNaturalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CatalogoPersonaNatural
-        fields = "__all__"
+        fields = [
+            "id",
+            "NumDocumento",
+            "Nombres",
+            "ApellidoPaterno",
+            "ApellidoMaterno",
+            "FechaNacimiento",
+            "Direccion",
+            "Telefono",
+            "Correo",
+            "FechaRegistro",
+            "CodUsuario",
+            "EstadoRegistro",
+            "TipoDocumentoIdentidadId",
+            "UbigeoId",
+            "GeneroId",
+            "EstadoCivilId",
+            "detalles",
+        ]
+
+    def create(self, validated_data):
+        detalles_data = validated_data.pop("detalles")
+        cabecera = CatalogoPersonaNatural.objects.create(**validated_data)
+        for detalle_data in detalles_data:
+            CatalogoPersonaNaturalMedioComunicacion.objects.create(
+                cabecera=cabecera, **detalle_data
+            )
+        return cabecera
