@@ -40,9 +40,8 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "store",
-    "ApiRestApp",
     "catalogo",
-    "ApiLogistica"
+    "ApiPrueba"
 ]
 
 MIDDLEWARE = [
