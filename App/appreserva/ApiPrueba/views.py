@@ -10,11 +10,12 @@ from .serializers import (
     EstadoCivilSerializer,
     GeneroSerializer,
     UbigeoSerializer,
-    PersonaNaturalSerializer
+    PersonaNaturalSerializer,
 )
 from .modelsItem.CargoModel import CargoModel
 from .modelsItem.GeneralModel import TipoDocumentoIdentidad, EstadoCivil, Genero, Ubigeo
 from .modelsItem.PersonaNaturalModel import PersonaNaturalModel
+
 
 class GuardarAlumnoYCurso(APIView):
     def post(self, request, format=None):
@@ -145,55 +146,40 @@ class CargoDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = CargoModel.objects.all()
     serializer_class = CargoSerializer
 
+from .Metodos.CargoBs import CargoBs
 
 class CargoSave(APIView):
     def post(self, request, format=None):
         try:
             data = request.data
-
-            # Validar la acción con el enumerado
             accion = data.get("Action", None)
-            if accion not in [item.value for item in Accion]:
-                return Response(
-                    {"error": "Acción no válida"}, status=status.HTTP_400_BAD_REQUEST
-                )
 
             if accion == Accion.UPDATE.value:
-                # Obtener el cargo a actualizar
-                cargo_id = data.get("CargoId")
-                try:
-                    cargo = CargoModel.objects.get(CargoId=cargo_id)
-                except CargoModel.DoesNotExist:
-                    return Response(
-                        {"error": "El cargo no existe"},
-                        status=status.HTTP_400_BAD_REQUEST,
-                    )
+               respuesta= CargoBs.Update(data)
+               return Response(respuesta)
+                # cargo_id = data.get("CargoId")
+                # cargo = CargoModel.objects.get(CargoId=cargo_id)
+                # cargo_serializer = CargoSerializer(cargo, data=data)
 
-                cargo_serializer = CargoSerializer(cargo, data=data)
-                if cargo_serializer.is_valid():
-                    cargo_serializer.save()
-                    return Response(
-                        {"success": "Cargo actualizado correctamente"},
-                        status=status.HTTP_200_OK,
-                    )
-                else:
-                    return Response(
-                        cargo_serializer.errors, status=status.HTTP_400_BAD_REQUEST
-                    )
+                # if cargo_serializer.is_valid():
+                #     cargo_serializer.save()
+                #     return Response(data)
+                # else:
+                #     return Response(
+                #         {"error": "Error"},
+                #         status=status.HTTP_400_BAD_REQUEST,
+                #     )
 
             elif accion == Accion.ADD.value:
                 cargo_serializer = CargoSerializer(data=data)
                 if cargo_serializer.is_valid():
                     cargo = cargo_serializer.save()
                     data["CargoId"] = cargo.CargoId
-
-                    return Response(
-                        {"success": "Cargo agregado correctamente", "data": data},
-                        status=status.HTTP_201_CREATED,
-                    )
+                    return Response(data)
                 else:
                     return Response(
-                        cargo_serializer.errors, status=status.HTTP_400_BAD_REQUEST
+                        {"error": "Error"},
+                        status=status.HTTP_400_BAD_REQUEST,
                     )
             elif accion == Accion.DELETE.value:
                 curso_id = data.get("CargoId", None)
@@ -201,15 +187,9 @@ class CargoSave(APIView):
                     try:
                         curso = CargoModel.objects.get(CargoId=curso_id)
                         curso.delete()
-                        return Response(
-                            {"success": "Cargo Elimino correctamente"},
-                            status=status.HTTP_201_CREATED,
-                        )
+                        return Response(True)
                     except CargoModel.DoesNotExist:
-                        return Response(
-                            {"error": "No existe"},
-                            status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                        )
+                        return Response(False)
 
             else:
                 return Response(
@@ -246,13 +226,16 @@ class PersonaNaturalViewSet(viewsets.ModelViewSet):
     queryset = PersonaNaturalModel.objects.all()
     serializer_class = PersonaNaturalSerializer
 
+
 from .models import Persona, TipoDocumento
-from .serializers import PersonaSerializer,PersonaNaturalMainSerializer
+from .serializers import PersonaSerializer, PersonaNaturalMainSerializer
+
 
 class PersonaListView(generics.ListAPIView):
-    queryset = Persona.objects.select_related('TipodocumentoId')
+    queryset = Persona.objects.select_related("TipodocumentoId")
     serializer_class = PersonaSerializer
 
+
 class PersonaNaturalMainListView(generics.ListAPIView):
-    queryset = PersonaNaturalModel.objects.select_related('TipoDocumentoIdentidad')
+    queryset = PersonaNaturalModel.objects.select_related("TipoDocumentoIdentidad")
     serializer_class = PersonaNaturalMainSerializer
