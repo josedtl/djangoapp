@@ -1,10 +1,10 @@
 from django import forms
-from .models import PersonaNatural
+from .models import PersonaNaturalItem
 
 
 class PersonaNaturalForm(forms.ModelForm):
     class Meta:
-        model = PersonaNatural
+        model = PersonaNaturalItem
 
         fields = [
             "NumDocumento",

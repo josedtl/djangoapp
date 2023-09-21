@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import PersonaNatural
+from .models import PersonaNaturalItem
 from .forms import PersonaNaturalForm
 
 
 def listar_personas_naturales(request):
-    personas = PersonaNatural.objects.all()
+    personas = PersonaNaturalItem.objects.all()
     if personas.count == 0:
         personas = []
     return render(request, "listar_personas_naturales.html", {"personas": personas})
@@ -22,7 +22,7 @@ def crear_persona_natural(request):
 
 
 def editar_persona_natural(request, persona_id):
-    persona = get_object_or_404(PersonaNatural, PersonaNaturalId=persona_id)
+    persona = get_object_or_404(PersonaNaturalItem, PersonaNaturalId=persona_id)
     if request.method == "POST":
         form = PersonaNaturalForm(request.POST, instance=persona)
         if form.is_valid():
@@ -34,6 +34,6 @@ def editar_persona_natural(request, persona_id):
 
 
 def eliminar_persona_natural(request, persona_id):
-    persona = get_object_or_404(PersonaNatural, PersonaNaturalId=persona_id)
+    persona = get_object_or_404(PersonaNaturalItem, PersonaNaturalId=persona_id)
     persona.delete()
     return redirect("listar_personas_naturales")

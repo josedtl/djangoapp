@@ -1,6 +1,6 @@
 from django.db import models
 
-class PersonaNatural(models.Model):
+class PersonaNaturalItem(models.Model):
     PersonaNaturalId = models.AutoField(primary_key=True)
     NumDocumento = models.CharField(max_length=20)
     Nombres = models.CharField(max_length=100)
