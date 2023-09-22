@@ -146,7 +146,9 @@ class CargoDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = CargoModel.objects.all()
     serializer_class = CargoSerializer
 
+
 from .Metodos.CargoBs import CargoBs
+
 
 class CargoSave(APIView):
     def post(self, request, format=None):
@@ -155,46 +157,14 @@ class CargoSave(APIView):
             accion = data.get("Action", None)
 
             if accion == Accion.UPDATE.value:
-               respuesta= CargoBs.Update(data)
-               return Response(respuesta)
-                # cargo_id = data.get("CargoId")
-                # cargo = CargoModel.objects.get(CargoId=cargo_id)
-                # cargo_serializer = CargoSerializer(cargo, data=data)
-
-                # if cargo_serializer.is_valid():
-                #     cargo_serializer.save()
-                #     return Response(data)
-                # else:
-                #     return Response(
-                #         {"error": "Error"},
-                #         status=status.HTTP_400_BAD_REQUEST,
-                #     )
-
+                respuesta = CargoBs.Update(data)
+                return Response(respuesta)
             elif accion == Accion.ADD.value:
-                cargo_serializer = CargoSerializer(data=data)
-                if cargo_serializer.is_valid():
-                    cargo = cargo_serializer.save()
-                    data["CargoId"] = cargo.CargoId
-                    return Response(data)
-                else:
-                    return Response(
-                        {"error": "Error"},
-                        status=status.HTTP_400_BAD_REQUEST,
-                    )
+                respuesta = CargoBs.Save(data)
+                return Response(respuesta)
             elif accion == Accion.DELETE.value:
-                curso_id = data.get("CargoId", None)
-                if curso_id is not None:
-                    try:
-                        curso = CargoModel.objects.get(CargoId=curso_id)
-                        curso.delete()
-                        return Response(True)
-                    except CargoModel.DoesNotExist:
-                        return Response(False)
-
-            else:
-                return Response(
-                    {"error": "Acción no válida"}, status=status.HTTP_400_BAD_REQUEST
-                )
+                respuesta = CargoBs.Delete(data)
+                return Response(respuesta)
 
         except Exception as e:
             return Response(

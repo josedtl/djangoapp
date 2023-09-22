@@ -13,4 +13,17 @@ class CargoBs:
         if cargo_serializer.is_valid():
             cargo_serializer.save()
             return data
-       
+
+    def Save(data: any):
+        cargo_serializer = CargoSerializer(data=data)
+        if cargo_serializer.is_valid():
+            cargo = cargo_serializer.save()
+            data["CargoId"] = cargo.CargoId
+            return data
+
+    def Delete(data: any):
+        curso_id = data.get("CargoId", None)
+        if curso_id is not None:
+            curso = CargoModel.objects.get(CargoId=curso_id)
+            curso.delete()
+            return True
