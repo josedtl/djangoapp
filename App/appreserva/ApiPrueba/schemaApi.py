@@ -21,7 +21,7 @@ class Query(graphene.ObjectType):
     hello = graphene.String(default_value="Hello!")
     Personas = graphene.List(PersonaNaturalType)
     Persona = graphene.Field(PersonaNaturalType, id=graphene.ID())
-
+    Personas = graphene.List(PersonaNaturalType)
     def resolve_Personas(self, info):
         return PersonaNaturalModel.objects.all()
 
