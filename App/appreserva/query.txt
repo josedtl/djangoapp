@@ -1,0 +1,22 @@
+{
+  books {
+    id
+    title
+    description
+  }
+}
+
+
+
+
+  mutation {
+    createBook(title: "Matemarica", description: "Mate") {
+      book {
+        id
+        title
+        description
+        createdAt
+        updatedAt
+      }
+    }
+  }

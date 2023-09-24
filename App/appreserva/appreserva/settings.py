@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "store",
-    "ApiPrueba"
+    "ApiPrueba",
+    "api",
+    "graphene_django",
 ]
 
 MIDDLEWARE = [
@@ -147,6 +149,5 @@ REST_FRAMEWORK = {
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",   # Ejemplo de permitir localhost para desarrollo
+    "http://localhost:4200",  # Ejemplo de permitir localhost para desarrollo
 ]
-
