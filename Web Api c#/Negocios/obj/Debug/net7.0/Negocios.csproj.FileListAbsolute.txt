@@ -1,0 +1,17 @@
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\bin\Debug\net7.0\Negocios.deps.json
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\bin\Debug\net7.0\Negocios.dll
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\bin\Debug\net7.0\Negocios.pdb
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\bin\Debug\net7.0\Datos.dll
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\bin\Debug\net7.0\Entidades.dll
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\bin\Debug\net7.0\Entidades.pdb
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\bin\Debug\net7.0\Datos.pdb
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\Negocios.csproj.AssemblyReference.cache
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\Negocios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\Negocios.AssemblyInfoInputs.cache
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\Negocios.AssemblyInfo.cs
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\Negocios.csproj.CopyComplete
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\Negocios.dll
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\refint\Negocios.dll
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\Negocios.pdb
+C:\Users\DAVID\Desktop\Web Api c#\Negocios\obj\Debug\net7.0\ref\Negocios.dll

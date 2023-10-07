@@ -1,0 +1,28 @@
+
+CREAR PROYECTO
+dotnet new webapi -n MiProyectoWebAPI
+
+EJECUTAR EL PROYECTO
+dotnet run
+dotnet watch run
+
+CREAR BIBLIOTECA DE CLASES
+dotnet new classlib -n Datos
+dotnet new classlib -n Entidades
+dotnet new classlib -n Negocios
+
+REFERENCIA PROYECTOS
+dotnet add reference ../Entidades/Entidades.csproj
+dotnet add reference ../Negocios/Negocios.csproj
+dotnet add reference ../Datos/Datos.csproj
+
+ACTUALIZAR LOS PAQUETES
+dotnet restore
+
+
+RUTA PARA EJECUTAR
+http://localhost:5086/swagger/index.html
+
+
+PAQUETE PARA LA CONEXION
+dotnet add package System.Data.SqlClient

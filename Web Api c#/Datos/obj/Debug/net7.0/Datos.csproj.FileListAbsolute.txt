@@ -1,0 +1,15 @@
+C:\Users\DAVID\Desktop\Web Api c#\Datos\bin\Debug\net7.0\Datos.deps.json
+C:\Users\DAVID\Desktop\Web Api c#\Datos\bin\Debug\net7.0\Datos.dll
+C:\Users\DAVID\Desktop\Web Api c#\Datos\bin\Debug\net7.0\Datos.pdb
+C:\Users\DAVID\Desktop\Web Api c#\Datos\bin\Debug\net7.0\Entidades.dll
+C:\Users\DAVID\Desktop\Web Api c#\Datos\bin\Debug\net7.0\Entidades.pdb
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\Datos.csproj.AssemblyReference.cache
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\Datos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\Datos.AssemblyInfoInputs.cache
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\Datos.AssemblyInfo.cs
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\Datos.csproj.CoreCompileInputs.cache
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\Datos.csproj.CopyComplete
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\Datos.dll
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\refint\Datos.dll
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\Datos.pdb
+C:\Users\DAVID\Desktop\Web Api c#\Datos\obj\Debug\net7.0\ref\Datos.dll
