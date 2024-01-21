@@ -26,3 +26,12 @@ http://localhost:5086/swagger/index.html
 
 PAQUETE PARA LA CONEXION
 dotnet add package System.Data.SqlClient
+
+dotnet new classlib -n Space.DataLayer
+dotnet new classlib -n Space.EntityLayer
+dotnet new classlib -n Space.BusinessLayer
+
+
+dotnet add reference ../Space.DataLayer/Space.DataLayer.csproj
+dotnet add reference ../Space.BusinessLayer/Space.BusinessLayer.csproj
+dotnet add reference ../Space.EntityLayer/Space.EntityLayer.csproj

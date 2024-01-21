@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r2VXOICVWwImq56dAnaFPhxfV5vavEZQZN7AoJPvfrmL+Z1/Dph6LlteKQR4/QmBHjWuKbbAgLntRXnx7zJmrA==",
+  "dgSpecHash": "ifLE/TpAjZ/Yaak8I4w+IOSVanAamP1eplWdp1NB7piIxcWKUzFa/9jDuurfp9626n8WxAhqkjNfF4P8Fl4Mdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DAVID\\Desktop\\Web Api c#\\Datos\\Datos.csproj",
+  "projectFilePath": "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

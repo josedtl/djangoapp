@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b5E+MjHlLCJifn1F4caBBm/vT84fkU04cNv6ZhiE+zXbDY5kGCi1w+OYyk0Avh87TvVAQdmJkI9d0Fs6s6d78g==",
+  "dgSpecHash": "CjXqFw3sN5UPp8Th3z/K0O37QACFLHJ8ZHoNjTU6ubWe0m9ADE2Vy6r8MxhOpjkwi1SoFYSAXePkogqzi28z3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DAVID\\Desktop\\Web Api c#\\apiserver\\ApiServer.csproj",
+  "projectFilePath": "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\ApiServer\\ApiServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.9\\microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

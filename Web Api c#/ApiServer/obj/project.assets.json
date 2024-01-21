@@ -984,19 +984,21 @@
   },
   "packageFolders": {
     "C:\\Users\\DAVID\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DAVID\\Desktop\\Web Api c#\\apiserver\\ApiServer.csproj",
+      "projectUniqueName": "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\ApiServer\\ApiServer.csproj",
       "projectName": "ApiServer",
-      "projectPath": "C:\\Users\\DAVID\\Desktop\\Web Api c#\\apiserver\\ApiServer.csproj",
+      "projectPath": "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\ApiServer\\ApiServer.csproj",
       "packagesPath": "C:\\Users\\DAVID\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DAVID\\Desktop\\Web Api c#\\apiserver\\obj\\",
+      "outputPath": "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\ApiServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\DAVID\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1016,11 +1018,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\DAVID\\Desktop\\Web Api c#\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\DAVID\\Desktop\\Web Api c#\\Entidades\\Entidades.csproj"
+            "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\Entidades\\Entidades.csproj"
             },
-            "C:\\Users\\DAVID\\Desktop\\Web Api c#\\Negocios\\Negocios.csproj": {
-              "projectPath": "C:\\Users\\DAVID\\Desktop\\Web Api c#\\Negocios\\Negocios.csproj"
+            "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\Negocios\\Negocios.csproj": {
+              "projectPath": "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\Negocios\\Negocios.csproj"
             }
           }
         }

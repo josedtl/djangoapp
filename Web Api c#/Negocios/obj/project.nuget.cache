@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bVn3B0ZfoxKv3iTrt/g0BoWr89R07vjJXpNJBhZkK1KsjxIZaITUrmY2fhVxnJbAdh9SWw2VtNZQOGa/Ea3SKQ==",
+  "dgSpecHash": "eJl4WNspz6mR2SlgYjsz1HhowOGuhgLKvqp/fVVq9sdgmqp54fEbADnIfNMDOIrsbd7rhQNyn5F1+nSvxAI/yQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DAVID\\Desktop\\Web Api c#\\Negocios\\Negocios.csproj",
+  "projectFilePath": "C:\\Users\\DAVID\\Documents\\GitHub\\djangoapp\\Web Api c#\\Negocios\\Negocios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\DAVID\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

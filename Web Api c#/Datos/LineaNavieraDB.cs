@@ -11,11 +11,8 @@ namespace Datos
         public List<LineaNavieraEntity> GetLineaNaviera()
         {
             List<LineaNavieraEntity> ListaData = new List<LineaNavieraEntity>();
-
             DatabaseManager dbManager = new DatabaseManager();
-
             SqlDataReader reader = dbManager.StoreConsulta("sp_LineaNaviera_SelectAll");
-
             LineaNavieraEntity Item = null;
             while (reader.Read())
             {
